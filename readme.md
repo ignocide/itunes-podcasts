@@ -7,7 +7,7 @@ using api site is [here](https://affiliate.itunes.apple.com/resources/documentat
 ### Install
 
 ```bash
-npm install itunes-podcastss
+npm install itunes-podcasts
 ```
 
 ### Usage
@@ -33,9 +33,9 @@ query's type can be **object** or **string**
 note. country is not podcast's origin place, that is sending country
 
 ```js
-import itunesPodcast from 'itunes-podcasts'
+import itunesPodcasts from 'itunes-podcasts'
 //or
-var itunesPodcast = require('itunes-podcasts')
+var itunesPodcasts = require('itunes-podcasts')
 
 const queries = {
   country: 'KR',
@@ -45,7 +45,7 @@ const queries = {
 const queries = '이진우의 손에 잡히는 경제'
 
 
-itunesPodcast.getPodcasts(queries).then((response) => {
+itunesPodcasts.getPodcasts(queries).then((response) => {
   //   {
   //   resultCount: 1,
   //   results:
@@ -72,12 +72,12 @@ parsing modules using [node-podcast-parser](https://www.npmjs.com/package/node-p
 so, result form is the same as node-podcast-parser module
 
 ```js
-import itunesPodcast from 'itunes-podcasts'
+import itunesPodcasts from 'itunes-podcasts'
 //or
-var itunesPodcast = require('itunes-podcasts')
+var itunesPodcasts = require('itunes-podcasts')
 
 const collectionId = 437788220
-itunesPodcast.getPodcastWithEpisodes(collectionId).then((result) => {
+itunesPodcasts.getPodcastWithEpisodes(collectionId).then((result) => {
   // console.log(result)
   // { categories: [ 'Business' ],
   //   title: '이진우의 손에 잡히는 경제',
