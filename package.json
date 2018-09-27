@@ -1,0 +1,44 @@
+{
+  "name": "itunes-podcast",
+  "version": "1.0.0",
+  "description": "search and get podcast from itunes",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node -- ./src/index.js",
+    "build": "npm run test && npm run clean && babel -d ./build ./src -s && npm run test-build",
+    "clean": "rm -rf build && mkdir build",
+    "test": "mocha --compilers js:babel-register ./test.js",
+    "test-build": "mocha ./test.build.js"
+  },
+  "keywords": [
+    "podcast",
+    "ituns",
+    "search"
+  ],
+  "author": "ignocide",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node-podcast-parser": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
+    "mocha": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ignocide/itunes-podcast.git"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  }
+}
