@@ -1,13 +1,13 @@
 ## ITUNES-PODCAST
 
-**itunes-podcast** is module that can get **Podcast** in itunes  
+**itunes-podcasts** is module that can get **Podcast** in itunes  
 
 using api site is [here](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
 
 ### Install
 
 ```bash
-npm install itunes-podcast
+npm install itunes-podcastss
 ```
 
 ### Usage
@@ -33,9 +33,9 @@ query's type can be **object** or **string**
 note. country is not podcast's origin place, that is sending country
 
 ```js
-import itunesPodcast from 'itunes-podcast'
+import itunesPodcast from 'itunes-podcasts'
 //or
-var itunesPodcast = require('itunes-podcast')
+var itunesPodcast = require('itunes-podcasts')
 
 const queries = {
   country: 'KR',
@@ -72,9 +72,9 @@ parsing modules using [node-podcast-parser](https://www.npmjs.com/package/node-p
 so, result form is the same as node-podcast-parser module
 
 ```js
-import itunesPodcast from 'itunes-podcast'
+import itunesPodcast from 'itunes-podcasts'
 //or
-var itunesPodcast = require('itunes-podcast')
+var itunesPodcast = require('itunes-podcasts')
 
 const collectionId = 437788220
 itunesPodcast.getPodcastWithEpisodes(collectionId).then((result) => {
